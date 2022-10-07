@@ -1,0 +1,10 @@
+
+export const validatePassword = () => {
+  return (rule: any, value: any, callback: any) => {
+    if (value.toString().length < 6) {
+      callback(new Error('密码不能少于6位'))
+    } else {
+      callback()
+    }
+  }
+}
